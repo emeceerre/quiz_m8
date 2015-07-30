@@ -65,3 +65,12 @@ button, input[type=submit] {
 table {
 	margin: 0 auto;
 }
+
+nav span {
+	margin: 0 10px 0 10px;
+}
+
+#ErrorMsgs {
+	color: #f61;
+	font-size: smaller;
+}

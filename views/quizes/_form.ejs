@@ -1,6 +1,19 @@
 <label for="preg" clas="rem">Pregunta:</label>
-<input type="text" id="preg" name="quiz[pregunta]" value="<%= quiz.pregunta%>" /> <p>
+<!-- ATENCION: por mi cuenta he cambiado value = "<%= quiz.pregunta%>" y en su lugar he creado un condicional para que si el usuario no escribe la pregunta o la respuesta se lo indique y no cree la pregunta sin más -->
+<input type="text" id="preg" name="quiz[pregunta]" placeholder="Pregunta" value = 
+	<% if (quiz.pregunta == 'Pregunta') {%>
+		""
+	<% } else { %>
+		"<%= quiz.pregunta%>"
+	<% } %>
+/> <p>
 <label for="resp" class="rem">Respuesta:</label>
-<input type="text" id="resp" name="quiz[respuesta]" value="<%= quiz.respuesta%>" /><p>
+<input type="text" id="resp" name="quiz[respuesta]" placeholder="Respuesta" value=
+	<% if (quiz.respuesta == 'Respuesta') {%>
+		""
+	<% } else { %>
+		"<%= quiz.respuesta%>"
+	<% } %>
+/><p>
 <a href="/quizes"><button type="button">Cancelar</button></a>
 <input type="submit" value="Salvar">
