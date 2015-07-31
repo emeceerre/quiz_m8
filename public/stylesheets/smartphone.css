@@ -11,9 +11,9 @@ h2 span, section h3 {
 }
 
 body {
-	font-size: xx-large;
+	font-size: 1.0em;
 }
 
 footer, input {
-	font-size: large;
+	font-size: medium;
 }

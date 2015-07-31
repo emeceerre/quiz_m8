@@ -67,6 +67,15 @@ tr button {
 
 table {
 	margin: 0 auto;
+	border-collapse: collapse; 
+}
+
+td {
+	padding: 3px;
+}
+
+tr:nth-of-type(odd) { 
+  background: #ddd; 
 }
 
 nav span {
@@ -77,3 +86,4 @@ nav span {
 	color: #f61;
 	font-size: smaller;
 }
+
