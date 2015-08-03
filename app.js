@@ -23,6 +23,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser('Quiz 2015')); // añadir semilla 'Quiz 2015 para cifrar cookie'
 app.use(session());
+/* {
+    secret: 'semilla',
+    resave: false,
+    saveUninitialized: true
+}*/
+app.use(session());
 app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname, 'public')));
 
