@@ -1,0 +1,44 @@
+<h3>Estadísticas</h3>
+<br>
+
+<div class="statistics">
+	<p>
+		<strong>Número de preguntas: </strong>
+		<!-- código -->
+		<%= datos.n_preguntas %>
+	</p>
+</div>
+
+<div class="statistics">
+	<p>
+		<strong>Número de comentarios totales: </strong>
+		<%= datos.n_comentarios %>
+	</p>
+</div>
+
+<div class="statistics">
+	<p>
+		<strong>Número medio de comentarios por pregunta: </strong>
+		<!-- ATENCIÓN comprobar primero que hay comentarios, si no sería división por 0 -->
+		<% if (datos.n_comentarios > 0) { %>
+            <%= (datos.n_preguntas / datos.n_comentarios).toFixed(2) %>
+        <% } else { %>
+            0
+        <% } %>
+	</p>
+</div>
+
+<div class="statistics">
+	<p>
+		<strong>Número de preguntas sin comentarios: </strong>
+		<%= datos.n_preg_nocoment %>
+	</p>
+</div>
+
+<div class="statistics">
+	<p>
+		<strong>Número de preguntas con comentarios: </strong>
+		<%= datos.n_preg_concoment %>
+	</p>
+</div>
+
