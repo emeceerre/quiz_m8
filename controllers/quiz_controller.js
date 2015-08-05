@@ -44,9 +44,12 @@ exports.answer = function(req, res) {
 	var resultado = 'Incorrecto';
 	//if ((req.query.respuesta).toLowerCase() === (req.quiz.respuesta).toLowerCase()){
 	//if (req.query.respuesta === req.quiz.respuesta){
-	var patron = new RegExp(req.quiz.respuesta,"i");
-	if(req.query.respuesta.match(patron)){
-		resultado = 'Correcto'
+	var patron = new RegExp(req.quiz.respuesta,"gi");
+	/*if(req.query.respuesta.match(patron)){
+		resultado = 'Correcto';
+	}*/
+	if (req.query.respuesta.toLowerCase() === req.quiz.respuesta.toLowerCase()){
+		resultado = 'Correcto';
 	}
 	res.render('quizes/answer', {quiz: req.quiz, respuesta: resultado, errors: []});
 };
